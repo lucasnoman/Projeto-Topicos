@@ -1,0 +1,360 @@
+:root {
+  --backgroundDarker: #262833;
+  --backgroundMid: #43475a;
+  --backgroundLighter: #606581;
+  --buttonPrimary: #d87428;
+  --buttonAdd: #4acfac;
+  --buttonRemove: #ffa48e;
+  --textPrimary: #ddd8cb;
+  --buttonDelete: #bd4d32;
+  --pixel14: 0.875rem;
+  --pixel16: 1rem;
+  --pixel18: 1.125rem;
+  --pixel20: 1.25rem;
+  --pixel24: 1.5rem;
+  --pixel26: 1.625rem;
+  --pixel32: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--backgroundDarker);
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  border: 1px solid rgba(97, 97, 97, 0.5);
+  position: relative;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  color: var(--textPrimary);
+  font-size: var(--pixel26);
+  font-weight: 700;
+}
+
+header svg {
+  color: var(--buttonPrimary);
+  font-size: 2.8rem;
+}
+
+header.headerOrganization {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px 0 32px;
+}
+
+header div.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr.titleLine {
+  width: 9.125rem;
+  margin: 3px 0 3px 0;
+  border-color: var(--buttonPrimary);
+}
+
+/* end header */
+
+.background2 {
+  background-color: var(--backgroundMid);
+  height: calc(100vh - 65px - 115px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* justify-content: space-between; */
+}
+
+hr.divider {
+  border: 1px solid #d87428b2;
+  width: 100%;
+}
+
+h2 {
+  color: var(--textPrimary);
+  font-size: var(--pixel24);
+  padding-top: var(--pixel24);
+  padding-bottom: var(--pixel24);
+  align-self: center;
+}
+
+/* Form start */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input.formText,
+div.formText {
+  width: 20.37rem;
+  height: 2.5rem;
+  background: var(--backgroundDarker);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  color: var(--textPrimary);
+  font-size: 1.25rem;
+  outline: none;
+  padding: 13px 0 14px 16px;
+}
+
+div.formText {
+  width: 326px;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  color: #757575;
+}
+
+input:focus {
+  border: 1px solid #ddd8cb80;
+}
+
+div.formText input {
+  width: 4.625rem;
+  height: var(--pixel18);
+  background-color: var(--backgroundLighter);
+  border-radius: 4px;
+  color: var(--textPrimary);
+  font-size: var(--pixel14);
+}
+
+input.formImage {
+  width: 20.37rem;
+  height: 3rem;
+  border-radius: 10px;
+}
+
+input.formImage:focus {
+  outline: none;
+}
+
+.labelButton {
+  border: 1px solid #ddd8cb63;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+/* Form end */
+
+.flexTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexBottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+button.register {
+  width: 20.37rem;
+  height: 3rem;
+  background: var(--buttonPrimary);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  color: var(--backgroundDarker);
+  font-size: var(--pixel20);
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+button.registeredProducts {
+  width: 20.37rem;
+  height: 3rem;
+  background: var(--backgroundDarker);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: 1px solid var(--buttonPrimary);
+  color: var(--textPrimary);
+  font-size: 1.25rem;
+  outline: none;
+}
+
+div.background2 form input[name=price] {
+  margin: var(--pixel20) 0 var(--pixel20) 0;
+}
+
+div.background2 form input[name=image] {
+  src: unset;
+}
+
+div.background2 form button[name=register] {
+  margin: var(--pixel32) 0 var(--pixel16) 0;
+}
+
+footer {
+  position: fixed;
+  height: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 32px 16px 32px;
+  background-color: var(--backgroundDarker);
+}
+
+footer.initialPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer.initialPage svg {
+  margin: 10px 0 10px 0;
+  font-size: 2.8rem;
+  color: var(--backgroundLighter);
+}
+
+a {
+  transition: all 3s ease-out;
+}
+
+body.fadeIn {
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.cardGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 var(--pixel24) 0 var(--pixel24);
+}
+
+.card {
+  height: 155px;
+  width: 155px;
+  border-radius: 10px;
+  background-color: var(--backgroundLighter);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 8px 11px 8px 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImage img {
+  border-radius: 6px;
+  width: 132px;
+  height: 90px;
+  margin-bottom: 8px;
+}
+
+.cardProductInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--textPrimary);
+}
+
+div.add svg {
+  height: 26px;
+  width: auto;
+}
+
+div#cartColor svg {
+  color: var(--buttonRemove);
+}
+
+/* Conteudo das outras páginas */
+.backgroundMid {
+  background-color: var(--backgroundMid);
+  height: calc(100vh - 65px - 115px);
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+.cardBanner {
+  height: 142px;
+  width: 326px;
+  border-radius: 10px;
+  background-color: var(--backgroundLighter);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 16px 8px 16px 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardBannerImage img {
+  border-radius: 6px;
+  width: 165px;
+  height: 110px;
+}
+
+.cardBannerProductInfo {
+  color: var(--textPrimary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.valueBanner {
+  font-size: var(--pixel20);
+  margin-left: 8px;
+}
+
+#boughtColor {
+  display: flex;
+  flex-direction: column;
+}
+
+div#boughtColor svg {
+  color: var(--buttonAdd);
+}
+
+div#boughtColor svg:nth-child(2) {
+  color: var(--buttonRemove);
+  margin-top: 8px;
+}
+
+footer div.footerCalcOrganization {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--textPrimary);
+}
+
+footer div.footerCalc {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
