@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Minha lista" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" href="../../public/appicons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../../public/appicons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="../../public/appicons/ios/Icon-57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../../public/appicons/ios/Icon-72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../public/appicons/ios/Icon-76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../../public/appicons/ios/Icon-120.png"
+    />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <title>MinhaLista</title>
+  </head>
+
+  <body>
+    <header>
+      <span
+        class="iconify"
+        data-icon="mdi-clipboard-list-outline"
+        data-inline="false"
+      ></span>
+      <hr class="titleLine" />
+      Minha Lista
+      <hr class="titleLine" />
+    </header>
+
+    <hr class="divider" />
+
+    <div class="background2">
+      <div class="flexTop">
+        <h2 class="">Preencha sua lista</h2>
+        <form action="">
+          <input
+            class="formText"
+            type="text"
+            name="name"
+            id="productName"
+            placeholder="Nome do produto"
+          />
+          <input
+            class="formText"
+            type="number"
+            name="price"
+            id="productPrice"
+            placeholder="Preço do produto"
+          />
+          <div class="formText">
+            <img id="showPicture" aria-placeholder="teste" style="width: 80px" />
+            <label class="labelButton" for="picture">Inserir imagem</label>
+            <input
+              id="picture"
+              type="file"
+              accept="image/*"
+              name="picture"
+              capture
+              onchange="loadFile(event)"
+              style="display: none"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="flexBottom">
+        <button type="button" class="register" name="register" id="register">
+          Cadastrar
+        </button>
+        <button class="registeredProducts" name="registeredProducts">
+          <a href="listaCadastrada.html" style="color: inherit; text-decoration: none">
+            Produtos cadastrados
+          </a>
+        </button>
+      </div>
+    </div>
+
+    <!-- <footer class="initialPage">
+    <span class="iconify" data-icon="mdi-clipboard-list-outline" data-inline="false"></span>
+  </footer> -->
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="../scripts/index.js"></script>
+  </body>
+</html>
