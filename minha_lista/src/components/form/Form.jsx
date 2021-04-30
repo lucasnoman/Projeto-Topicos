@@ -13,12 +13,12 @@ import {
 } from './styles.js';
 
 export default function Form(props) {
-  const [productName, setProductName] = useState('');
-  const [productPrice, setProductPrice] = useState('');
-  const [{ alt, src }, setImg] = useState({
-    src: '',
-    alt: '',
-  });
+  const [{ alt, src }, setImg] = useState({ src: '', alt: '' });
+  const [products, setProducts] = useState({ name: '', price: '' });
+
+  const handleChange = e => {
+    setProducts({ ...products, [e.target.name]: e.target.value });
+  };
 
   const handleImg = e => {
     if (e.target.files[0]) {
@@ -34,28 +34,28 @@ export default function Form(props) {
       <MainForm
         onSubmit={e => {
           e.preventDefault();
-          props.onAddName(productName);
-          setProductName('');
-          props.onAddPrice(productPrice);
-          setProductPrice('');
+          // print();
+          props.onAddProduct(products);
         }}
       >
         <div>
           <InputText
             placeholder={'Nome do produto'}
-            value={productName}
-            onChange={e => setProductName(e.target.value)}
+            value={products.name}
+            name="name"
+            onChange={handleChange}
           />
           <InputText
             placeholder={'Preço do produto'}
-            value={productPrice}
-            onChange={e => setProductPrice(e.target.value)}
+            value={products.price}
+            name="price"
+            onChange={handleChange}
           />
           <ImageField>
             <img
               src={src}
               alt={alt}
-              style={{ height: 140, marginRight: 50, borderRadius: 10 }}
+              style={{ maxHeight: 140, marginRight: 50, borderRadius: 10 }}
             />
             <LabelImageButton for="picture">Inserir imagem</LabelImageButton>
             <InputImage
@@ -69,7 +69,7 @@ export default function Form(props) {
         </div>
 
         <ButtonsGroup>
-          <Button type="submit" disabled={productName.length === 0} primary>
+          <Button type="submit" disabled={products.length === 0} primary>
             Cadastrar
           </Button>
           <Link to="/list" style={{ textDecoration: 'none' }}>

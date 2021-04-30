@@ -7,14 +7,22 @@ export const Bottom = styled.footer`
   bottom: 0;
   overflow: scroll;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   width: 100%;
   height: 4rem;
   font-size: 2.8rem;
 
   color: rgba(96, 101, 129, 1);
   background-color: ${COLORS.backgroundDarker};
+`;
+
+export const Group = styled.div`
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+`;
+
+export const Line = styled.hr`
+  margin-top: 2px;
 `;

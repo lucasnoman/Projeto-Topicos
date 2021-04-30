@@ -9,13 +9,13 @@ export default function Content(props) {
     <>
       <Card>
         <Delete>
-          <IoIosCloseCircleOutline />
+          <IoIosCloseCircleOutline onClick={() => props.onDelete(props.name)} />
         </Delete>
         <Image src="https://source.unsplash.com/random" alt="" />
         <Description>
           <div>
-            <p>Produto</p>
-            <p>R$ preço</p>
+            <p>{props.name}</p>
+            <p>R$ {props.price}</p>
           </div>
           <IconAdd>
             <MdAddShoppingCart />
