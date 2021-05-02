@@ -15,7 +15,7 @@ export default function Content(props) {
         <Description>
           <div>
             <p>{props.name}</p>
-            <p>R$ {props.price}</p>
+            <p>{props.format(Number(props.price))}</p>
           </div>
           <IconAdd>
             <MdAddShoppingCart />

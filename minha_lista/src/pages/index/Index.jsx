@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import TitleH1 from '../../components/title/Title';
 import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
+import Footer2 from '../../components/footer/Footer2';
 import Form from '../../components/form/Form';
 
 const Index = props => {
@@ -21,7 +21,7 @@ const Index = props => {
       <main>
         <Form products={products} onAddProduct={addProduct} />
       </main>
-      <Footer index />
+      <Footer2 />
     </>
   );
 };

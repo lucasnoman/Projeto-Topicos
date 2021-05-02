@@ -7,6 +7,7 @@ export const Bottom = styled.footer`
   bottom: 0;
   overflow: scroll;
 
+  padding: 15px;
   width: 100%;
   height: 4rem;
   font-size: 2.8rem;
@@ -16,6 +17,7 @@ export const Bottom = styled.footer`
 `;
 
 export const Group = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
@@ -25,4 +27,21 @@ export const Group = styled.div`
 
 export const Line = styled.hr`
   margin-top: 2px;
+`;
+
+export const Bottom2 = styled.footer`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 0;
+  overflow: scroll;
+
+  width: 100%;
+  height: 4rem;
+  font-size: 2.8rem;
+
+  color: rgba(96, 101, 129, 1);
+  background-color: ${COLORS.backgroundDarker};
 `;

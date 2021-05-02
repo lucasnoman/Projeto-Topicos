@@ -17,6 +17,11 @@ const List = props => {
     localStorage.setItem('products', JSON.stringify(products));
   });
 
+  let formatter = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  });
+
   return (
     <>
       <Header />
@@ -30,12 +35,13 @@ const List = props => {
                 name={content.name}
                 price={content.price}
                 onDelete={deleteProduct}
+                format={formatter.format}
               />
             ))}
           </div>
         )}
       </main>
-      <Footer index={false} />
+      <Footer index={false} format={formatter.format} />
     </>
   );
 };
