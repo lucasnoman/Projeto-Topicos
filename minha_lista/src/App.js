@@ -5,6 +5,7 @@ import { GlobalStyles } from './style/global';
 
 const App = props => (
   <>
+    {/* adicionei um pacote de rotas para gerenciar as páginas mais facilmente */}
     <BrowserRouter>
       <Routes />
     </BrowserRouter>

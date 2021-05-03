@@ -1,4 +1,3 @@
-import calc from 'postcss-calc';
 import React from 'react';
 import { HiOutlineClipboardList } from 'react-icons/hi';
 

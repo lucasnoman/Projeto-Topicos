@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+## Nome da aplicação
+Minha lista
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dev
+Lucas Calhau Noman
 
-## Available Scripts
+## O que ela faz?
+A aplicação serve como uma lista para cadastrar produtos que o usuário deseja comprar, sendo possível usar a câmera do celular ou inserir uma foto.
 
-In the project directory, you can run:
+## Explicação página principal
+Aqui o usuário pode inserir o nome do produto, seu preço e a imagem (se quiser). Ao apertar em "Cadastrar", o conteúdo é enviado para o local storage e para a página seguinte.
+Ao clicar em "Produtos cadastrados", o usuário é levado a página onde sua lista está sendo criada.
 
-### `yarn start`
+## Explicação da segunda página
+Aqui a aplicação apresenta todos os produtos cadastrados, com imagem, nome e preço. É disponibilizado também, um ícone de cor alaranjada em cada "cartão" para possibilitar a remoção do conteúdo.
+No final da página, é disponibilizado o total de cada item.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dados armazenados
+Os únicos dados armazenados são os inseridos pelo usuário, referente a cada item da lista.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- A aplicação é original e não uma cópia da aplicação de um colega ou de uma aplicação já existente? **Sim**
+- A aplicação tem pelo menos duas interfaces (telas ou páginas) independentes? **Sim**
+- A aplicação armazena e usa de forma relevante dados complexos do usuário? **Sim**
+- A aplicação foi desenvolvida com o React? **Sim**
+- A aplicação contém pelo menos dois componentes React além do componente principal? **Sim**
+- O código da minha aplicação possui comentários explicando cada operação? **Sim**
+- A aplicação está funcionando corretamente? **Não**¹
+- A aplicação está completa? **Sim**²
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+¹ Está fazendo sua função, porém há erros de css e com as imagens que ainda não consegui solucionar.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+² De acordo com o necessário, sim. Porém ainda queria colocar mais uma página que não está sendo possível por não ter conseguido resolver as imagens ainda.s

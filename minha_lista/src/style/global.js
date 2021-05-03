@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Como estou usando o pacote Styled Components, usei uma de suas funções
+// para criar um estilo global. Os demais estilos são "scoped", ou seja,
+// aplicados apenas a seu devido arquivo.
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;

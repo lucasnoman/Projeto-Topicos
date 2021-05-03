@@ -9,11 +9,13 @@ export default function Content(props) {
     <>
       <Card>
         <Delete>
+          {/* Envia por props qual card deve ser deletado do LocalStorage */}
           <IoIosCloseCircleOutline onClick={() => props.onDelete(props.name)} />
         </Delete>
         <Image src="https://source.unsplash.com/random" alt="" />
         <Description>
           <div>
+            {/* Retorna em cada card seu nome e preço */}
             <p>{props.name}</p>
             <p>{props.format(Number(props.price))}</p>
           </div>

@@ -9,7 +9,14 @@ import { Title, Line } from './styles.js';
 export default function Header(props) {
   return (
     <>
+      {/* Como o Header é usado em duas páginas e cada uma tem uma variação,
+        houve a necessidade de enviar uma informação como props para poder
+        definir o estilo do Header em cada página
+    */}
       <Title index={props.index}>
+        {/* Esse link é do router para poder fazer a seta redirecionar para
+            o índice
+        */}
         <Link to="/" style={{ alignSelf: 'center' }}>
           <MdArrowBack
             style={{

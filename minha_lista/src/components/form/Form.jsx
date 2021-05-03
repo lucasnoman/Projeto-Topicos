@@ -13,13 +13,19 @@ import {
 } from './styles.js';
 
 export default function Form(props) {
+  // Esse hook pega os dados da imagem, porém não consigo adicionar "value={}"
+  // pois a página fica toda branca, então não tenho conseguido pegar os dados
+  // da imagem para adicionar no LocalStorage
   const [{ alt, src }, setImg] = useState({ src: '', alt: '' });
+  // Hook para pegar os dados digitados nos inputs de nome e preço
   const [products, setProducts] = useState({ name: '', price: '' });
 
+  // Função para adicionar os produtos no vetor
   const handleChange = e => {
     setProducts({ ...products, [e.target.name]: e.target.value });
   };
 
+  // Função para pegar os dados da foto que for tirada ou imagem que for subida
   const handleImg = e => {
     if (e.target.files[0]) {
       setImg({
@@ -34,7 +40,8 @@ export default function Form(props) {
       <MainForm
         onSubmit={e => {
           e.preventDefault();
-          // print();
+          // Executa a função de adicionar produtos ao apertar no botão
+          // "Cadastrar"
           props.onAddProduct(products);
         }}
       >
@@ -50,6 +57,7 @@ export default function Form(props) {
             value={products.price}
             name="price"
             onChange={handleChange}
+            type="number"
           />
           <ImageField>
             <img
